@@ -1,0 +1,53 @@
+/*
+ * Matrix Welcome Bot - Greet your new room members with a message
+ * Copyright (C) 2019 Kamax Sarl
+ *
+ * https://www.kamax.io/
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Affero General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU Affero General Public License for more details.
+ *
+ * You should have received a copy of the GNU Affero General Public License
+ * along with this program.  If not, see <https://www.gnu.org/licenses/>.
+ */
+
+group = 'io.kamax'
+
+apply plugin: 'java'
+apply plugin: 'application'
+apply plugin: 'com.github.johnrengelman.shadow'
+
+mainClassName = 'io.kamax.matrix.bot.welcome.App'
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+
+    dependencies {
+        classpath 'com.github.jengelman.gradle.plugins:shadow:2.0.4'
+    }
+}
+
+repositories {
+    jcenter()
+    maven {  url 'https://kamax.io/maven/releases/' }
+    maven {  url 'https://kamax.io/maven/snapshots/' }
+}
+
+dependencies {
+    compile 'org.slf4j:slf4j-simple:1.7.25'
+    compile 'io.kamax:matrix-java-sdk:0.0.18-6-gc1b3b0c'
+}
+
+shadowJar {
+    classifier = null
+    version = null
+}

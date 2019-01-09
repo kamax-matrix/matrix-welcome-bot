@@ -1,0 +1,10 @@
+# Gradle
+.gradle
+build/
+
+# Intellij IDEA
+.idea/
+out/
+
+# Data
+data.json
