@@ -1,6 +1,12 @@
 # Matrix Welcome Bot
 [![Build Status](https://travis-ci.org/kamax-matrix/matrix-welcome-bot.svg?branch=master)](https://travis-ci.org/kamax-matrix/matrix-welcome-bot)
 
+---
+
+**This project is no longer maintained.**
+
+---
+
 ## Overview
 This Matrix bot will join whatever room it is invited to and greed new users with your configured message.   
 
@@ -63,6 +69,3 @@ Run with:
 ```
 docker run --rm -e 'WB_CONFIG_KEY=...' matrix-welcome-bot
 ```
-
-## Support
-On Matrix: #matrix-welcome-bot:kamax.io
